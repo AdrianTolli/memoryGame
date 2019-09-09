@@ -1,0 +1,59 @@
+.gameBoard {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+@media screen and (orientation: landscape) {
+  .gameBoard {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
+
+button {
+  border: none;
+  overflow: hidden;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 12px;
+  box-sizing: border-box;
+}
+button:focus {
+  border: 2px solid blue;
+}
+
+/*Card animation*/
+.flippedBack {
+  animation-name: cardFlipBack;
+  animation-duration: 1s;
+}
+.flipped {
+  pointer-events: none;
+  animation-name: cardFlip;
+  animation-duration: 1s;
+}
+@keyframes cardFlip {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes cardFlipBack {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
